@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+header {
+  background-color: black;
+  padding: 30px;
+  height: 40px;
+  color: white;
+}
+
+.sidenav {
+  width: 250px;
+  background: black;
+  position: absolute;
+  height: 95vh;
+  padding: 0 0px;
+  left: -100%;
+  transition: all 1s;
+}
+
+.sidenav.active {
+  left: 0;
+  background-color: black;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+ul li a:hover,
+ul li a.active {
+  background-color: rgb(236, 227, 227);
+  color: black;
+}
+
+ul li a svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+header svg {
+  font-size: 40px;
+}
+
+.main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: wheat;
+  transition: margin-left 0.5s ease; 
+}
+
+.sidenav.active + .main {
+  margin-left: 250px; /* Moves the "main" div to the right by the width of the "sidenav" */
+  width: calc(100% - 250px); /* Adjusts the width of the main div to prevent horizontal scroll */
+}
+
+.table-container {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.5s ease;
+  height: 90vh; /* added height */
+}
+
+.sidenav.active + .table-container {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+.container{
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  transition: transform 0.5s;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+h1{
+  font-size: x-large;
+  text-align: center;
+  color: black;
+}
+
+label{
+  font-size: large;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+input[type="radio"]{
+  display:inline;
+  width: 10%;
+
+}
+
+select{
+  display: none;
+  width:100%;
+  margin-bottom:15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+textarea{
+  resize: none;
+  width:98%;
+  min-height: 150px;
+  max-height: 100px;
+}
+
+button{
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin:15px;
+  border:none;
+  color:white;
+  cursor:pointer;
+  background-color: blue;
+  font-size: 16px;
+}
+
+button:hover{
+  background-color: goldenrod;
+}
+
+
+.header{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name{
+  font-size: 15px;
+  font-weight: bold ;
+  color: goldenrod;
+  font-family: Arial, Helvetica, sans-serif;
+}
